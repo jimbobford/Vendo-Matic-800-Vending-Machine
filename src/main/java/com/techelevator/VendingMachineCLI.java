@@ -12,8 +12,9 @@ public class VendingMachineCLI {
 	private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "1";
 	private static final String MAIN_MENU_OPTION_PURCHASE = "2";
 	private static final String MAIN_MENU_OPTION_EXIT = "3";
-	public Inventory machineInventory = new Inventory();
+
 	public ItemReader inventoryReader = new ItemReader();
+	public Inventory machineInventory = new Inventory(inventoryReader.createInventory());
 
 	public static void main(String[] args) {
 		VendingMachineCLI cli = new VendingMachineCLI();

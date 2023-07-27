@@ -1,22 +1,17 @@
 package com.techelevator;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Inventory {
 
-    /*private Map<String, Integer> inventoryMap = new HashMap<>();*/
+    List<Item> currentInventory = new ArrayList<>();
 
-    public Inventory() {
-    }
-
-/*    public Map<String, Integer> getInventoryMap(){
-        return inventoryMap;
-    }*/
-
-    public void addInventory(String itemLocation, String itemName, BigDecimal itemPrice){
-
+    public Inventory(List<Item> currentInventory) {
+        this.currentInventory = currentInventory;
     }
 
 

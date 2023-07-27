@@ -1,6 +1,6 @@
 package com.techelevator;
 
-public class Gum {
+public class Gum extends Item{
 
     public Gum(){
 
