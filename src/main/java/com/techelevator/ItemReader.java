@@ -9,13 +9,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ItemReader {
+    private final String GUM_MESSAGE = "Chew Chew, Yum!";
+    private final String CANDY_MESSAGE = "Yummy Yummy, So Sweet!";
+    private final String MUNCHY_MESSAGE = "Crunch Crunch, Yum!";
+    private final String DRINK_MESSAGE = "Glug Glug, Yum!";
+    private List<Item> newInventory = new ArrayList<>();
 
     private File itemList = new File("main.csv");
     public ItemReader() {
     }
 
 
-    public void displayInventory() {
+    /*public void displayInventory() {
         Scanner fileScanner;
         try{
             fileScanner = new Scanner(itemList);
@@ -38,10 +43,16 @@ public class ItemReader {
             System.exit(1);
         }
 
+    }*/
+
+    public void invDisplay(List<Item> input){
+        for(int i = 0; i < input.size(); i++) {
+            System.out.println(input.get(i).toString());
+        }
     }
 
     public List<Item> createInventory() {
-        List<Item> newInventory = new ArrayList<>();
+
         Scanner fileScanner;
         try {
             fileScanner = new Scanner(itemList);
@@ -58,17 +69,37 @@ public class ItemReader {
                 BigDecimal currentPrice = BigDecimal.valueOf(Double.valueOf(currentItem[2]));
                 String currentType = currentItem[3];
 
-                Item newItem = null;
+                // Constructors WOULD NOT work, kept returning null values, went with setters because it works.
+
                 if (currentType.equals("Candy")) {
-                    newItem = new Candy(currentLocation, currentName, currentPrice, "Yummy Yummy, So Sweet!");
+                    Candy newCandy = new Candy();
+                    newCandy.setLocation(currentLocation);
+                    newCandy.setName(currentName);
+                    newCandy.setPrice(currentPrice);
+                    newCandy.setMessage(CANDY_MESSAGE);
+                    newInventory.add(newCandy);
                 } else if (currentType.equals("Drink")) {
-                    newItem = new Drink();
+                    Drink newDrink = new Drink(currentLocation, currentName, currentPrice, DRINK_MESSAGE);
+                    newDrink.setLocation(currentLocation);
+                    newDrink.setName(currentName);
+                    newDrink.setPrice(currentPrice);
+                    newDrink.setMessage(DRINK_MESSAGE);
+                    newInventory.add(newDrink);
                 } else if (currentType.equals("Munchy")) {
-                    newItem = new Munchy();
+                    Munchy newMunchy = new Munchy(currentLocation, currentName, currentPrice, MUNCHY_MESSAGE);
+                    newMunchy.setLocation(currentLocation);
+                    newMunchy.setName(currentName);
+                    newMunchy.setPrice(currentPrice);
+                    newMunchy.setMessage(MUNCHY_MESSAGE);
+                    newInventory.add(newMunchy);
                 } else if (currentType.equals("Gum")) {
-                    newItem = new Gum();
+                    Gum newGum = new Gum(currentLocation, currentName, currentPrice, GUM_MESSAGE);
+                    newGum.setLocation(currentLocation);
+                    newGum.setName(currentName);
+                    newGum.setPrice(currentPrice);
+                    newGum.setMessage(GUM_MESSAGE);
+                    newInventory.add(newGum);
                 }
-                newInventory.add(newItem);
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not found");

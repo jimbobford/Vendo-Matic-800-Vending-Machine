@@ -28,6 +28,10 @@ public abstract class Item {
         return price;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getInventory() {
         return inventory;
     }
@@ -38,5 +42,34 @@ public abstract class Item {
 
     public void setInventory(int inventory) {
         this.inventory = inventory;
+    }
+
+    public void purchaseMade() {
+        if(this.inventory > 0) {
+            this.inventory--;
+        } else {
+            System.out.println("SOLD OUT");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return this.location + " " + this.name + " $" + this.price + " " + this.inventory;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

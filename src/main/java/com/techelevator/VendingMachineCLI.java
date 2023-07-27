@@ -15,6 +15,8 @@ public class VendingMachineCLI {
 
 	public ItemReader inventoryReader = new ItemReader();
 	public Inventory machineInventory = new Inventory(inventoryReader.createInventory());
+	public MachineFunds funds = new MachineFunds();
+
 
 	public static void main(String[] args) {
 		VendingMachineCLI cli = new VendingMachineCLI();
@@ -22,30 +24,33 @@ public class VendingMachineCLI {
 	}
 
 	public void run() {
-
-		while (true) {
-			System.out.println("Welcome to Umbrella Corp. Vendo-Matic 800!");
+		machineInventory.initializeInventory();
+		boolean stay = true;
+		System.out.println("\n**************************************\n");
+		System.out.println("Welcome to Umbrella Corp. Vendo-Matic 800!");
+		while (stay) {
+			System.out.println("\n**************************************\n");
 			System.out.println("Please make a selection:");
 			System.out.println("Enter 1 to display items available. \nEnter 2 to make a purchase. \nEnter 3 to exit this menu.");
+			String choiceMenu = userInput.nextLine();
 
-			String choice = userInput.nextLine();
+			if (choiceMenu.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
+				inventoryReader.invDisplay(machineInventory.getCurrentInventory());
 
-			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
+			} else if (choiceMenu.equals(MAIN_MENU_OPTION_PURCHASE)) {
+				System.out.println("Please enter the letter and number of the item you'd like to purchase:");
+				String choiceItem = userInput.nextLine();
+				machineInventory.subtractInventory(choiceItem);
+				if(machineInventory.)
+				System.out.println( "You have chosen " + machineInventory.getNameFromList(choiceItem));
 
-				inventoryReader.displayInventory();
-
-			} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
-
-				// do purchase
-
-			} else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
-
+			} else if (choiceMenu.equals(MAIN_MENU_OPTION_EXIT)) {
 				System.out.println("Thank you for choosing Umbrella Corp. Vendo-Matic 800!");
 				System.out.println("Have a great day!");
-				System.exit(0);
+				stay = false;
+			} else {
+				System.out.println("Invalid input. ");
 			}
-			// Remove the break when you've figured out how to setup the input loop
-			break;
 		}
 	}
 }
