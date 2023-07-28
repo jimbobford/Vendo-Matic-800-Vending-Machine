@@ -77,7 +77,7 @@ public class VendingMachineCLI {
 								BigDecimal discountedPrice = machineInventory.getPriceFromList(choiceItem).subtract(discountDollar);
 								funds.decreaseBalance(discountedPrice);
 								machineInventory.subtractInventory(choiceItem);
-								logger.write(machineInventory.getNameFromList(choiceItem) + ", " + choiceItem + ", $" + discountedPrice +  " (discounted from" + machineInventory.getPriceFromList(choiceItem) + " by $1 for BOGO sale), $" + funds.getBalance());
+								logger.write(machineInventory.getNameFromList(choiceItem) + ", " + choiceItem + ", $" + discountedPrice +  " (discounted from $" + machineInventory.getPriceFromList(choiceItem) + " by $1 for BOGO sale), $" + funds.getBalance());
 								System.out.println("You chose " + machineInventory.getNameFromList(choiceItem) + " from " + choiceItem + ". " + machineInventory.getMessageFromList(choiceItem));
 								System.out.println("The total after $1 off was $" + discountedPrice + " and your remaining balance is $" + funds.getBalance());
 								discount = false;

@@ -28,7 +28,8 @@ public class Logger {
             writer.flush();
             writer.close();
         } catch(FileNotFoundException e) {
-
+            System.out.println("File cannot be written to");
+            System.exit(1);
         }
     }
 

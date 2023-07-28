@@ -18,6 +18,9 @@ public class MachineFunds {
         this.balance = this.balance.subtract(amount);
     }
 
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
 
     public void dispenseChange(){
         final BigDecimal QUARTER = new BigDecimal("0.25");
@@ -38,7 +41,7 @@ public class MachineFunds {
 
         int pennyAmount = change.divideToIntegralValue(PENNY).intValue();
 
-        System.out.println("The total change is $" + this.balance);
+        System.out.println("The total change is $" + this.balance + ". " + "The new balance is $0.00");
         System.out.println("This amounts to " + quarterAmount + " quarters, " + dimeAmount + " dimes, " + nickelAmount + " nickels, and " + pennyAmount + " pennies.");
         this.balance = this.balance.subtract(this.balance);
     }

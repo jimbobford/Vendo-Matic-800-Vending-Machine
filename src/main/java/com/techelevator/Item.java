@@ -40,10 +40,6 @@ public abstract class Item {
         return message;
     }
 
-    public void setInventory(int inventory) {
-        this.inventory = inventory;
-    }
-
     public void purchaseMade() {
         if(this.inventory > 0) {
             this.inventory--;
