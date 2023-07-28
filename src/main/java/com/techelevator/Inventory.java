@@ -40,6 +40,24 @@ public class Inventory {
         } return result;
     }
 
+    public int getInventoryFromList(String input){
+        int result = 0;
+        for (int i = 0; i < currentInventory.size(); i++) {
+            if(currentInventory.get(i).getLocation().equals(input)) {
+                result = currentInventory.get(i).getInventory();
+            }
+        } return result;
+    }
+
+    public String getMessageFromList(String input){
+        String result = "";
+        for (int i = 0; i < currentInventory.size(); i++) {
+            if(currentInventory.get(i).getLocation().equals(input)) {
+                result = currentInventory.get(i).getMessage();
+            }
+        } return result;
+    }
+
     public BigDecimal getPriceFromList(String input){
         BigDecimal result = null;
         for (int i = 0; i < currentInventory.size(); i++) {

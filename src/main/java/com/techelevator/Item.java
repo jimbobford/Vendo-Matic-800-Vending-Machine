@@ -54,7 +54,11 @@ public abstract class Item {
 
     @Override
     public String toString() {
-        return this.location + " " + this.name + " $" + this.price + " " + this.inventory;
+        if(this.getInventory() == 0) {
+            return "Location: " + this.location + " \nItem name: " + this.name + " \nPrice: $" + this.price + " \nOUT OF STOCK" + "\n\n";
+        } else {
+            return "Location: " + this.location + " \nItem name: " + this.name + " \nPrice: $" + this.price + " \nIn Stock: " + this.inventory + "\n\n";
+        }
     }
 
     public void setName(String name) {
