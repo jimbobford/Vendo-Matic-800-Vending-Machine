@@ -30,6 +30,7 @@ public class LoggerTest {
     public void can_write_to_log(){
         logger.write("Test");
         assertTrue(file.exists());
+        assertNotNull("testlog.txt");
     }
 
 }

@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ItemReaderTest {
     ItemReader itemReader;
@@ -19,12 +20,11 @@ public class ItemReaderTest {
         assertNotNull(inventory);
     }
 
-//    @Test
-//    public void can_display_inventory(){
-//        List<Item> inventory = itemReader.createInventory();
-//        itemReader.invDisplay(inventory);
-//        if(inventory != null){
-//
-//        }
-//    }
+    @Test
+    public void can_display_inventory(){
+        List<Item> inventory = itemReader.createInventory();
+        itemReader.invDisplay(inventory);
+
+        assertTrue(itemReader.getCreateCounter() != 0);
+    }
 }

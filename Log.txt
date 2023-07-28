@@ -85,3 +85,42 @@
 2023-07-28T11:58:31.410853300 Dispensed change. Balance was $3.35, new balance is $0.00
 2023-07-28T11:58:39.841541600 Added $100000000000000000000.00 to balance. New balance is $100000000000000000000.00
 2023-07-28T11:58:41.563862800 Dispensed change. Balance was $100000000000000000000.00, new balance is $0.00
+2023-07-28T15:34:41.448789500 Machine has been turned on
+2023-07-28T15:40:54.176476 Machine has been turned on
+2023-07-28T15:43:41.600366700 Machine has been turned on
+2023-07-28T15:44:28.686585900 Added $-1.00 to balance. New balance is $-1.00
+2023-07-28T15:46:27.438866900 Machine has been turned on
+2023-07-28T15:49:48.423390100 Machine has been turned on
+2023-07-28T15:50:00.772763500 Added $1.00 to balance. New balance is $1.00
+2023-07-28T15:50:18.412946400 Teaberry, D1, $1.65, $-0.65
+2023-07-28T15:56:28.495615100 Machine has been turned on
+2023-07-28T15:56:33.733042200 Added $1.00 to balance. New balance is $1.00
+2023-07-28T15:57:44.080015700 Added $1.00 to balance. New balance is $2.00
+2023-07-28T15:57:48.944558700 Dispensed change. Balance was $2.00, new balance is $0.00
+2023-07-28T15:58:03.042368200 Machine has been turned on
+2023-07-28T15:58:37.814550500 Machine has been turned on
+2023-07-28T16:00:36.913785700 Machine has been turned on
+2023-07-28T16:04:47.390264500 Machine has been turned on
+2023-07-28T16:04:57.879521 Added $2.22 to balance. New balance is $2.22
+2023-07-28T16:05:23.948338400 Added $1.00 to balance. New balance is $3.22
+2023-07-28T16:05:28.757412600 Added $1.00 to balance. New balance is $4.22
+2023-07-28T16:05:36.125099600 Ginger Ayle, A2, $1.85, $2.374242
+2023-07-28T16:07:29.537970200 Machine has been turned on
+2023-07-28T16:07:35.895852100 Added $1.11 to balance. New balance is $1.11
+2023-07-28T16:07:54.755282 Added $2.00 to balance. New balance is $3.11
+2023-07-28T16:08:04.271081500 Ginger Ayle, A2, $1.85, $1.2611
+2023-07-28T16:09:12.809524700 Machine has been turned on
+2023-07-28T16:09:16.302559700 Added $10.00 to balance. New balance is $10.00
+2023-07-28T16:09:24.133887400 U-Chews, A1, $1.65, $8.35
+2023-07-28T16:09:29.222786700 U-Chews, A1, $0.65 (discounted from $1.65 by $1 for BOGO sale), $7.70
+2023-07-28T16:11:28.970228800 Machine has been turned on
+2023-07-28T16:12:07.496569700 Machine has been turned on
+2023-07-28T16:12:11.813084200 Added $1.00 to balance. New balance is $1.00
+2023-07-28T16:12:27.055155300 Added $3.00 to balance. New balance is $4.00
+2023-07-28T16:12:32.366172700 Ginger Ayle, A2, $1.85, $2.15
+2023-07-28T16:13:37.180859400 Dispensed change. Balance was $2.15, new balance is $0.00
+2023-07-28T16:14:39.298185700 Machine has been turned on
+2023-07-28T16:14:47.989176200 Added $10.00 to balance. New balance is $10.00
+2023-07-28T16:14:55.291748200 U-Chews, A1, $1.65, $8.35
+2023-07-28T16:15:04.815999500 null, A3, $3.25 (discounted from $4.25 by $1 for BOGO sale), $5.10
+2023-07-28T16:15:11.253266700 Dispensed change. Balance was $5.10, new balance is $0.00

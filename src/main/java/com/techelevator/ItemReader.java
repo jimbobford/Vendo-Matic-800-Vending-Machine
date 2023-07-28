@@ -14,15 +14,22 @@ public class ItemReader {
     private final String MUNCHY_MESSAGE = "Crunch Crunch, Yum!";
     private final String DRINK_MESSAGE = "Glug Glug, Yum!";
     private List<Item> newInventory = new ArrayList<>();
+    private int createCounter = 0;
 
     private File itemList = new File("main.csv");
     public ItemReader() {
+
+    }
+
+    public int getCreateCounter() {
+        return createCounter;
     }
 
     public void invDisplay(List<Item> input){
         for(int i = 0; i < input.size(); i++) {
             System.out.println(input.get(i).toString());
         }
+        createCounter++;
     }
 
     public List<Item> createInventory() {
@@ -81,5 +88,6 @@ public class ItemReader {
         }
         return newInventory;
     }
+
 
 }
