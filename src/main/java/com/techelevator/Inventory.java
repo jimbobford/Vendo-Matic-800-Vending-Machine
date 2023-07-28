@@ -40,6 +40,15 @@ public class Inventory {
         } return result;
     }
 
+    public BigDecimal getPriceFromList(String input){
+        BigDecimal result = null;
+        for (int i = 0; i < currentInventory.size(); i++) {
+            if(currentInventory.get(i).getLocation().equals(input)) {
+                result = currentInventory.get(i).getPrice();
+            }
+        } return result;
+    }
+
     public void subtractInventory(String input){
         String selection = input;
         if(invMap.containsKey(selection)) {
