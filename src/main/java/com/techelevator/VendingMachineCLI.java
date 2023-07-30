@@ -87,7 +87,7 @@ public class VendingMachineCLI {
 							choiceItem = userInput.nextLine().toUpperCase();
 							if(!machineInventory.getInvMap().containsKey(choiceItem)){
 								throw new NullPointerException();
-							};
+							}
 						} catch (NullPointerException e) {
 							System.out.println("Invalid input.");
 							break;
